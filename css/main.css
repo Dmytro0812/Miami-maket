@@ -1,0 +1,432 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/images/bg-first.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header_title {
+  max-width: 800px;
+  position: relative;
+  left: 25%;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5rem;
+  letter-spacing: -0.09375rem;
+  margin: 3rem 0;
+}
+.header_title::after {
+  content: "";
+  width: 2.5rem;
+  height: 0.125rem;
+  flex-shrink: 0;
+  background-color: #fff;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+.header__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header__navbar {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem 0;
+  align-items: center;
+}
+.header__navbar-link-burger-hover {
+  display: none;
+}
+.header__navbar-link-burger:hover + .header__navbar-link-burger-hover {
+  display: flex;
+  position: relative;
+}
+.header__navbar-link-burger:hover {
+  display: none;
+}
+.header__navbar-link-contact::after {
+  content: "+1 234 555-55-55";
+  position: absolute;
+  top: 3.5rem;
+  right: 23rem;
+  display: none;
+}
+.header__navbar-link-contact:hover::after {
+  display: inline;
+}
+
+.description {
+  margin: 0;
+  padding: 0;
+}
+.description__container {
+  margin: 0 15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  top: 5rem;
+  margin-bottom: 10rem;
+}
+.description__title {
+  color: #000;
+  font-family: Roboto;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3rem;
+  letter-spacing: -0.09375rem;
+}
+.description__title span {
+  color: var(--blue, #0075ff);
+  font-family: Roboto;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3rem;
+  letter-spacing: -0.09375rem;
+}
+.description__block {
+  width: 31.125rem;
+}
+.description__title-paragraph {
+  color: var(--blue, #0075ff);
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.875rem;
+}
+.description__paragraph {
+  color: var(--text, #3e3e3e);
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+.description__paragraph span {
+  color: var(--text, #3e3e3e);
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6875rem;
+}
+
+.gallery__container {
+  margin: 2rem 15rem;
+}
+.gallery__container h4 {
+  color: var(--text, #3e3e3e);
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+.gallery__container h4 span {
+  color: var(--blue, #0075ff);
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6875rem; /* 168.75% */
+}
+.gallery__title {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3rem; /* 100% */
+  letter-spacing: -0.09375rem;
+}
+.gallery__title::after {
+  content: "";
+  height: 16px;
+  background-image: url(/icons/Icon-Corona-virus.svg);
+  background-repeat: no-repeat;
+  display: block;
+  background-position: 50%;
+  margin-bottom: 3.5rem;
+}
+.gallery__flex-photo {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.gallery__block-photo {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.gallery__block-photo img {
+  display: block;
+  transition: 0.3s;
+}
+.gallery__block-photo img:hover {
+  transform: scale(1.1);
+}
+.gallery__block-button {
+  display: flex;
+  justify-content: center;
+}
+.gallery__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #0075ff;
+  width: 9.375rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  border-radius: 0.5em;
+  transition: 0.3s;
+  margin-bottom: 5rem;
+  color: var(--blue, #0075ff);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0.875rem; /* 87.5% */
+  cursor: pointer;
+}
+.gallery__button:hover {
+  background-color: #0075ff;
+  color: #fff;
+  box-shadow: 0 10px 27px #0075ff;
+}
+
+.recenze__container {
+  margin: 2rem 15rem;
+}
+.recenze__title {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3rem; /* 100% */
+  letter-spacing: -0.09375rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+.recenze__title::after {
+  content: "";
+  background-image: url(/icons/Icon-Corona-virus.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: block;
+  height: 1rem;
+}
+.recenze__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.recenze__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.recenze__name {
+  color: var(--blue, #0075ff);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.875rem; /* 125% */
+}
+.recenze__job {
+  color: #9fadc2;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6875rem; /* 192.857% */
+}
+.recenze__description {
+  color: var(--text, #3e3e3e);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6875rem; /* 168.75% */
+}
+
+.contacts__container {
+  margin: 3rem 15rem;
+}
+.contacts__title {
+  display: flex;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3rem;
+}
+.contacts__title::after {
+  content: "";
+  height: 16px;
+  background-image: url(/icons/Icon-Corona-virus.svg);
+  background-repeat: no-repeat;
+  display: block;
+  background-position: 50%;
+  margin-bottom: 3.5rem;
+  margin-top: 2rem;
+}
+.contacts__block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contacts__info {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  align-items: baseline;
+}
+.contacts__contact {
+  color: var(--text, #3e3e3e);
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+.contacts__contact span {
+  color: #9fadc2;
+  font-family: Roboto;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6875rem; /* 192.857% */
+}
+.contacts__adress {
+  color: var(--text, #3e3e3e);
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+.contacts__adress span {
+  color: #9fadc2;
+  font-family: Roboto;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6875rem; /* 192.857% */
+}
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+}
+.contacts__form-input {
+  border-radius: 0.5rem;
+  background: #f6f8ff;
+  width: 25.6875rem;
+  height: 3rem;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+  border: none;
+}
+.contacts__form-input::-moz-placeholder {
+  color: #8f99a8;
+  font-family: Roboto;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  padding-left: 0.5rem;
+}
+.contacts__form-input::placeholder {
+  color: #8f99a8;
+  font-family: Roboto;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  padding-left: 0.5rem;
+}
+.contacts__form-message {
+  width: 25.6875rem;
+  height: 9rem;
+  flex-shrink: 0;
+}
+.contacts__form-message::-moz-placeholder {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+}
+.contacts__form-message::placeholder {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+}
+.contacts__form-button {
+  background-color: #0075ff;
+  border: none;
+  width: 25.6875rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0.875rem; /* 87.5% */
+  transition: 0.3s;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.contacts__form-button:hover {
+  background-color: #005ecc;
+  filter: drop-shadow(0px 13px 27px rgba(0, 83, 181, 0.46));
+}
+
+.footer {
+  background-image: url(/images/image\ 1.png);
+  height: 400px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.footer__logo {
+  margin-bottom: 4rem;
+}/*# sourceMappingURL=main.css.map */
